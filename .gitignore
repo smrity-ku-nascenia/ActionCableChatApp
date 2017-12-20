@@ -16,8 +16,25 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-/.idea
+
 /node_modules
 /yarn-error.log
 
 .byebug_history
+
+.rspec
+config/application.yml
+config/secrets.yml
+/vendor/bundle
+/vendor/ruby
+.rvmrc
+.ruby-gemset
+.ruby-version
+
+Gemfile.lock
+config/database.yml
+log/development.log
+
+.idea
+.idea/*
+
