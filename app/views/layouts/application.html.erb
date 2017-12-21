@@ -10,7 +10,19 @@
 
   <body>
     <div class="container">
+      <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+            <%= value %>
+            <a class='close-alert' href='javascript:void(0);'> X </a>
+          </div>
+          <% flash.delete(key) %>
+      <% end %>
       <%= yield %>
     </div>
+    <script>
+      $('.close-alert').click(function(){
+          $(this).parents(".alert").remove();
+      });
+    </script>
   </body>
 </html>

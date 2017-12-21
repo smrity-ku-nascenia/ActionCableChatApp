@@ -1,3 +1,12 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <%= current_user.email %> <span class="panel-title pull-right">(<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>)</span>
+    </h3>
+
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-9">
     <ul id="conversations-list">
@@ -8,9 +17,9 @@
   </div>
 
   <div class="col-md-3">
-    <div class="panel panel-primary">
+    <div class="panel panel-success">
       <div class="panel-heading">
-        <h3 class="panel-title">User list</h3>
+        <h3 class="panel-title">Available User list</h3>
       </div>
       <div class="panel-body">
         <ul>
