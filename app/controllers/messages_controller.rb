@@ -1,7 +1,8 @@
+# This controller creates messages between users
 class MessagesController < ApplicationController
   def create
-    @conversation = Conversation.includes(:recipient).find(params[:conversation_id])
-    @message = @conversation.messages.create(message_params)
+    @chat = Conversation.includes(:recipient).find(params[:conversation_id])
+    @message = @chat.messages.create(message_params)
 
     respond_to do |format|
       format.js

@@ -1,3 +1,4 @@
+# This channel class manages subscription of users to different conversations
 class ConversationChannel < ApplicationCable::Channel
   def subscribed
     stream_from "conversations-#{current_user.id}"

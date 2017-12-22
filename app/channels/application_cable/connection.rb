@@ -1,4 +1,5 @@
 module ApplicationCable
+  # This class checks user is valid or not
   class Connection < ActionCable::Connection::Base
     identified_by :current_user
 

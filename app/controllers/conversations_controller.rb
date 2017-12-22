@@ -1,3 +1,4 @@
+# This controller creates conversations between users
 class ConversationsController < ApplicationController
   def create
     @conversation = Conversation.get(current_user.id, params[:user_id])
